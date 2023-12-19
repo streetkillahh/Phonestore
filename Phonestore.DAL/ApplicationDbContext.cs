@@ -10,5 +10,10 @@ namespace Phonestore.DAL
             Database.EnsureCreated();
         }
         public DbSet<Phone> Phones { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }
