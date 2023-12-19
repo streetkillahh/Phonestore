@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{A8496175-AA6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{08D4238F-0121-426B-8768-38B9A019FBBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonestore.DAL", "Phonestore.DAL\Phonestore.DAL.csproj", "{1B12AF3F-E501-40FE-8B01-A20526410837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonestore.DAL", "Phonestore.DAL\Phonestore.DAL.csproj", "{1B12AF3F-E501-40FE-8B01-A20526410837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonestore.Domain", "Phonestore.Domain\Phonestore.Domain.csproj", "{A44C1803-4A05-4BF0-B832-786D807AF781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonestore.Domain", "Phonestore.Domain\Phonestore.Domain.csproj", "{A44C1803-4A05-4BF0-B832-786D807AF781}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{144B31DC-18D7-4087-A97A-9132E347DD1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonestore.Service", "Phonestore.Service\Phonestore.Service.csproj", "{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{A44C1803-4A05-4BF0-B832-786D807AF781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A44C1803-4A05-4BF0-B832-786D807AF781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A44C1803-4A05-4BF0-B832-786D807AF781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1B12AF3F-E501-40FE-8B01-A20526410837} = {A8496175-AA66-42CE-83E4-B5E978A2EF10}
 		{A44C1803-4A05-4BF0-B832-786D807AF781} = {08D4238F-0121-426B-8768-38B9A019FBBC}
+		{A88C8F82-3D8C-4D9F-B8D3-0E0DD4AAE3AA} = {144B31DC-18D7-4087-A97A-9132E347DD1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD1793C2-00B7-45AD-B780-3F421938202B}
