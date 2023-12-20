@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Phonestore.DAL\Phonestore.DAL.csproj" />
     <ProjectReference Include="..\Phonestore.Domain\Phonestore.Domain.csproj" />
   </ItemGroup>
 

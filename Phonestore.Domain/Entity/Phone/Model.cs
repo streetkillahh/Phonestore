@@ -12,7 +12,6 @@
         public string Display { get; set; }
         public string RAM { get; set; }
         public string Storage { get; set; }
-        public int PhoneId { get; set; }
         public Phone Phone { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
