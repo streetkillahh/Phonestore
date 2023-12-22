@@ -1,8 +1,84 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="padding: 10px;"></div>
+<!--Проверка авторизации пользователя на сайте-->
+
+    <div class="card col-md-12">
+        <div class="card-body">
+            <h5 class="card-title text-center">Добро пожаловать на сайт Phonestore</h5>
+            <p class="card-text">
+                На этом сайте вы сможете выбрать подходящий для вас телефон, посмотреть его характеристики, сравнить
+                с другими моделями, а также приобрести его
+            </p>
+            <p class="card-text"><small class="text-muted">streetkillah's Phonestore</small></p>
+        </div>
+    </div>
+    <div style="padding: 10px;"></div>
+<div class="row row-cols-1 row-cols-3 g-4">
+    <div class="col">
+        <div class="card h-100">
+            <img src="~/img/Apple.jpg" class="card-img-top card-image" alt="Apple phone"/>
+            <div class="card-body text-center">
+                <h5 class="card-title">Смартфоны Apple</h5>
+                <p class="card-text">
+                Американская корпорация, разработчик персональных и планшетных компьютеров, 
+                аудиоплееров, смартфонов, программного обеспечения и цифрового контента. Их
+                характерная черта — собственные операционные системы iOS, MacOS,
+                watchOS и iPadOS, которые созданы специально для техники бренда.
+                </p>
+            </div>
+            <div class="card-footer text-center">
+                @*Будет нужно добавить контроллер с представлением*@
+                <a asp-controller="Phone" asp-action="GetPhones" class="card-link">Телефоны Apple</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="~/img/Samsung.jpg" class="card-img-top card-image" alt="Samsung phone" />
+            <div class="card-body text-center">
+                <h5 class="card-title">Samsung</h5>
+                <p class="card-text">
+                    Samsung Group — южнокорейская группа компаний. На мировом рынке известен как производитель 
+                    высокотехнологичных компонентов, телекоммуникационного оборудования, бытовой техники, 
+                    аудио- и видеоустройств.
+                </p>
+            </div>
+            <div class="card-footer text-center">
+                @*А также сделать атрибут, чтобы при переходе на условную страницу телефонов Samsung, 
+                показывались лишь телефоны @Samsung по фильтру*@
+                <a asp-controller="Phone" asp-action="GetPhones" class="card-link">Телефоны Samsung</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="~/img/Xiaomi.jpg" class="card-img-top card-image" alt="Xiaomi phone" />
+            <div class="card-body text-center">
+                <h5 class="card-title">Xiaomi</h5>
+                <p class="card-text">
+                    Xiaomi — китайская компания, основанная в 2010 году и занимающаяся выпуском электроники 
+                    и бытовой техники, а также разработкой программного обеспечения.
+                </p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Phone" asp-action="GetPhones" class="card-link">Телефоны Xiaomi</a>
+            </div>
+        </div>
+    </div>
 </div>
+<div style="padding: 10px;"></div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Последние новинки</h5>
+        @*Здесь будет нужна привязка к списку последних добавленных телефонов*@
+        <ul>
+
+        </ul>
+    </div>
+
+</div>
+
+

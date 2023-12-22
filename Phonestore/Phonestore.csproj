@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Phonestore.DAL\Phonestore.DAL.csproj" />
+    <ProjectReference Include="..\Phonestore.Service\Phonestore.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,6 +13,7 @@
         public string RAM { get; set; }
         public string Storage { get; set; }
         public Phone Phone { get; set; }
+        public int BrandId { get; set; }
         public Brand Brand { get; set; }
     }
 }
