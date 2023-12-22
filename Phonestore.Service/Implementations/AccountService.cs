@@ -24,9 +24,36 @@ namespace Phonestore.Service.Implementations
             _profileRepository = profileRepository;
             _userRepository = userRepository;
         }
-        public Task<BaseResponse<ClaimsIdentity>> Login(LoginViewModel model)
+        public async Task<BaseResponse<ClaimsIdentity>> Login(LoginViewModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await _userRepository.GetAll().FirstOrDefaultAsync(x => x.Name == model.Name);
+                if (user == null)
+                {
+                    return new BaseResponse<ClaimsIdentity>()
+                    {
+                        Description = "Пользователь не найден"
+                    };
+                }
+                if (user.Password != HashPasswordHelper.HashPassword(model.Password))
+                {
+                    return new BaseResponse<ClaimsIdentity>()
+                    {
+                        Description = "Неверный пароль или логин"
+                    };
+                }
+                var result = Authenticate(user);
+                return new BaseResponse<ClaimsIdentity>()
+                {
+                    Data = result,
+                    StatusCode = StatusCode.OK
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<ClaimsIdentity>();
+            }
         }
 
         public async Task<BaseResponse<ClaimsIdentity>> Register(RegisterViewModel model)
