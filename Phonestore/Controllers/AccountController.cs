@@ -34,5 +34,12 @@ namespace Phonestore.Controllers
             }
             return View(model);
         }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
